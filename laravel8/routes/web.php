@@ -19,12 +19,12 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', HomeController::class);
 
-Route::get('cursos', [CursoController::class, 'index']);
+Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
 
-Route::get('cursos/create', [CursoController::class, 'create']);
+Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
 
 //CREANDO RUTA CON UN VARIABLE
-Route::get('cursos/{cursos}', [CursoController::class, 'show']);
+Route::get('cursos/{id}', [CursoController::class, 'show'])->name('cursos.show');
 
 
 //CREANDO VARIABLE OPCIONAL
